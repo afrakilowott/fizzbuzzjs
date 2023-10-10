@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        function fizzBuzz(n) {
+            var output = document.getElementById("output");
+
+            for (var i = 1; i <= n; i++) {
+                var result = "";
+
+                if (i % 3 === 0) {
+                    result += "Fizz";
+                }
+
+                if (i % 5 === 0) {
+                    result += "Buzz";
+                }
+
+                if (result === "") {
+                    result = i;
+                }
+
+                output.innerHTML += result + "<br>";
+            }
+        }
+
+        // Call the function with n = 15 to print numbers from 1 to 15
+        fizzBuzz(15);
+    </script>
+</body>
+</html>
